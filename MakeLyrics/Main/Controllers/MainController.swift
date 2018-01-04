@@ -8,13 +8,39 @@
 
 import UIKit
 
-class MainController: UIViewController {
-
+class MainController: MLBaseController,UITableViewDelegate,UITableViewDataSource {
+    
+    var songArray = Array<String>();
+    @IBOutlet weak var songTable: UITableView! ;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.songTable.tableFooterView = UIView();
+        
+        let fileTool = WLFileTool();
+        fileTool.getMusicList(path: documentPath) { (songNameArray) in
+            songArray = songNameArray;
+        }
+        
         // Do any additional setup after loading the view.
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.songArray.count;
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:MLMainSongListCell = tableView.dequeueReusableCell(withIdentifier: "MLMainSongListCell") as! MLMainSongListCell ;
+        cell.songName.text = self.songArray[indexPath.row];
+        return cell;
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -22,6 +48,10 @@ class MainController: UIViewController {
     }
     
 
+    @IBAction func openMake(_ sender: UIButton) {
+        let make = MakeLyriceController();
+        self.navigationController?.pushViewController(make, animated: true);
+    }
     /*
     // MARK: - Navigation
 

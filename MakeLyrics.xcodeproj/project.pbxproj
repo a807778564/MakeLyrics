@@ -49,6 +49,11 @@
 		2C1F96EF1FE9F9E100A6E36B /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96CB1FE9F9E100A6E36B /* ConstraintLayoutSupportDSL.swift */; };
 		2C1F96F01FE9F9E100A6E36B /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96CC1FE9F9E100A6E36B /* ConstraintMakerRelatable.swift */; };
 		2C1F96F21FE9FB1300A6E36B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96F11FE9FB1300A6E36B /* MainController.swift */; };
+		2C1F96F41FE9FE0900A6E36B /* MakeLyriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96F31FE9FE0900A6E36B /* MakeLyriceController.swift */; };
+		2C1F96FB1FEA0A6A00A6E36B /* MLPublicDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96FA1FEA0A6A00A6E36B /* MLPublicDefine.swift */; };
+		2C1F96FD1FEA0CEA00A6E36B /* MLBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96FC1FEA0CEA00A6E36B /* MLBaseController.swift */; };
+		2C1F96FF1FEA380100A6E36B /* WLFileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F96FE1FEA380100A6E36B /* WLFileTool.swift */; };
+		2CF045C91FFCA7C500F28A18 /* MLMainSongListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF045C81FFCA7C500F28A18 /* MLMainSongListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +123,11 @@
 		2C1F96CB1FE9F9E100A6E36B /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		2C1F96CC1FE9F9E100A6E36B /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		2C1F96F11FE9FB1300A6E36B /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		2C1F96F31FE9FE0900A6E36B /* MakeLyriceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeLyriceController.swift; sourceTree = "<group>"; };
+		2C1F96FA1FEA0A6A00A6E36B /* MLPublicDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLPublicDefine.swift; sourceTree = "<group>"; };
+		2C1F96FC1FEA0CEA00A6E36B /* MLBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLBaseController.swift; sourceTree = "<group>"; };
+		2C1F96FE1FEA380100A6E36B /* WLFileTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLFileTool.swift; sourceTree = "<group>"; };
+		2CF045C81FFCA7C500F28A18 /* MLMainSongListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLMainSongListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +180,7 @@
 			children = (
 				2C1F96A31FE9F9E100A6E36B /* Main */,
 				2C1F96CD1FE9F9E100A6E36B /* StorBoard */,
+				2C1F96F71FEA0A3600A6E36B /* Utils */,
 				2C1F96A71FE9F9E100A6E36B /* libs */,
 				2C1F96751FE9F80C00A6E36B /* AppDelegate.swift */,
 				2C1F967C1FE9F80C00A6E36B /* Assets.xcassets */,
@@ -217,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				2C1F96F11FE9FB1300A6E36B /* MainController.swift */,
+				2C1F96F31FE9FE0900A6E36B /* MakeLyriceController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 		2C1F96A61FE9F9E100A6E36B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CF045C81FFCA7C500F28A18 /* MLMainSongListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +299,33 @@
 				2C1F967E1FE9F80C00A6E36B /* LaunchScreen.storyboard */,
 			);
 			path = StorBoard;
+			sourceTree = "<group>";
+		};
+		2C1F96F71FEA0A3600A6E36B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C1F96FE1FEA380100A6E36B /* WLFileTool.swift */,
+				2C1F96F81FEA0A3600A6E36B /* MLDefine */,
+				2C1F96F91FEA0A3600A6E36B /* Base */,
+			);
+			name = Utils;
+			path = MakeLyrics/Utils;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C1F96F81FEA0A3600A6E36B /* MLDefine */ = {
+			isa = PBXGroup;
+			children = (
+				2C1F96FA1FEA0A6A00A6E36B /* MLPublicDefine.swift */,
+			);
+			path = MLDefine;
+			sourceTree = "<group>";
+		};
+		2C1F96F91FEA0A3600A6E36B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2C1F96FC1FEA0CEA00A6E36B /* MLBaseController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,7 +464,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1F96CE1FE9F9E100A6E36B /* ConstraintMultiplierTarget.swift in Sources */,
+				2C1F96F41FE9FE0900A6E36B /* MakeLyriceController.swift in Sources */,
 				2C1F96DC1FE9F9E100A6E36B /* UILayoutSupport+Extensions.swift in Sources */,
+				2C1F96FD1FEA0CEA00A6E36B /* MLBaseController.swift in Sources */,
 				2C1F96F01FE9F9E100A6E36B /* ConstraintMakerRelatable.swift in Sources */,
 				2C1F96E01FE9F9E100A6E36B /* Typealiases.swift in Sources */,
 				2C1F96F21FE9FB1300A6E36B /* MainController.swift in Sources */,
@@ -432,6 +474,7 @@
 				2C1F96DE1FE9F9E100A6E36B /* ConstraintLayoutGuide.swift in Sources */,
 				2C1F96D71FE9F9E100A6E36B /* ConstraintDSL.swift in Sources */,
 				2C1F96D21FE9F9E100A6E36B /* ConstraintAttributes.swift in Sources */,
+				2C1F96FB1FEA0A6A00A6E36B /* MLPublicDefine.swift in Sources */,
 				2C1F96DA1FE9F9E100A6E36B /* ConstraintInsetTarget.swift in Sources */,
 				2C1F96D11FE9F9E100A6E36B /* ConstraintMakerPriortizable.swift in Sources */,
 				2C1F96DF1FE9F9E100A6E36B /* ConstraintLayoutSupport.swift in Sources */,
@@ -448,6 +491,7 @@
 				2C1F96E91FE9F9E100A6E36B /* Constraint.swift in Sources */,
 				2C1F96CF1FE9F9E100A6E36B /* LayoutConstraintItem.swift in Sources */,
 				2C1F96D41FE9F9E100A6E36B /* ConstraintPriorityTarget.swift in Sources */,
+				2CF045C91FFCA7C500F28A18 /* MLMainSongListCell.swift in Sources */,
 				2C1F96DB1FE9F9E100A6E36B /* ConstraintConfig.swift in Sources */,
 				2C1F96ED1FE9F9E100A6E36B /* LayoutConstraint.swift in Sources */,
 				2C1F96E41FE9F9E100A6E36B /* ConstraintMaker.swift in Sources */,
@@ -456,6 +500,7 @@
 				2C1F96D01FE9F9E100A6E36B /* ConstraintDescription.swift in Sources */,
 				2C1F96E51FE9F9E100A6E36B /* ConstraintRelation.swift in Sources */,
 				2C1F96E71FE9F9E100A6E36B /* ConstraintView+Extensions.swift in Sources */,
+				2C1F96FF1FEA380100A6E36B /* WLFileTool.swift in Sources */,
 				2C1F96D81FE9F9E100A6E36B /* ConstraintMakerExtendable.swift in Sources */,
 				2C1F96E61FE9F9E100A6E36B /* ConstraintLayoutGuideDSL.swift in Sources */,
 				2C1F96E81FE9F9E100A6E36B /* ConstraintItem.swift in Sources */,
